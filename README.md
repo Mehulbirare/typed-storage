@@ -1,16 +1,16 @@
-# typestorage
+# typedstorage-safe
 
-[![npm version](https://img.shields.io/npm/v/typestorage)](https://www.npmjs.com/package/typestorage)
-[![npm downloads](https://img.shields.io/npm/dm/typestorage)](https://www.npmjs.com/package/typestorage)
-[![bundle size](https://img.shields.io/bundlephobia/minzip/typestorage)](https://bundlephobia.com/package/typestorage)
-[![license](https://img.shields.io/npm/l/typestorage)](./LICENSE)
+[![npm version](https://img.shields.io/npm/v/typedstorage-safe)](https://www.npmjs.com/package/typedstorage-safe)
+[![npm downloads](https://img.shields.io/npm/dm/typedstorage-safe)](https://www.npmjs.com/package/typedstorage-safe)
+[![bundle size](https://img.shields.io/bundlephobia/minzip/typedstorage-safe)](https://bundlephobia.com/package/typedstorage-safe)
+[![license](https://img.shields.io/npm/l/typedstorage-safe)](./LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-first-blue)](https://www.typescriptlang.org/)
 
 > TypeScript-first localStorage and sessionStorage with **TTL expiry**, **SSR safety**, **cross-tab sync**, and **full type inference**. Zero dependencies. ~1.5KB gzipped.
 
 ---
 
-## Why typed-storage?
+## Why typedstorage-safe?
 
 Plain `localStorage` has four major problems that every developer hits:
 
@@ -26,15 +26,15 @@ Plain `localStorage` has four major problems that every developer hits:
 ## Installation
 
 ```bash
-npm install typestorage
+npm install typedstorage-safe
 ```
 
 ```bash
-yarn add typestorage
+yarn add typedstorage-safe
 ```
 
 ```bash
-pnpm add typestorage
+pnpm add typedstorage-safe
 ```
 
 ---
@@ -42,7 +42,7 @@ pnpm add typestorage
 ## Quick Start
 
 ```ts
-import { createStorage } from 'typestorage'
+import { createStorage } from 'typedstorage-safe'
 
 const store = createStorage({ prefix: 'myapp' })
 
@@ -58,7 +58,7 @@ store.remove('theme')
 Define your schema once and get full autocomplete and error detection everywhere.
 
 ```ts
-import { createStorage } from 'typestorage'
+import { createStorage } from 'typedstorage-safe'
 
 type AppSchema = {
   user: { id: number; name: string; role: 'admin' | 'user' }
@@ -269,7 +269,7 @@ unsub()  // stop listening
 ### React
 
 ```tsx
-import { createStorage } from 'typestorage'
+import { createStorage } from 'typedstorage-safe'
 import { useState, useEffect } from 'react'
 
 type Schema = { theme: 'light' | 'dark' }
@@ -294,7 +294,7 @@ function useTheme() {
 
 ```ts
 // lib/storage.ts — shared across the app
-import { createStorage } from 'typestorage'
+import { createStorage } from 'typedstorage-safe'
 
 type AppSchema = {
   user: { id: string; name: string }
@@ -320,7 +320,7 @@ export default function Layout({ children }) {
 ### Vue 3
 
 ```ts
-import { createStorage } from 'typestorage'
+import { createStorage } from 'typedstorage-safe'
 import { ref, watchEffect } from 'vue'
 
 type Schema = { theme: 'light' | 'dark' }
@@ -340,7 +340,7 @@ export function useTheme() {
 ### Vanilla TypeScript / Node.js
 
 ```ts
-import { createStorage } from 'typestorage'
+import { createStorage } from 'typedstorage-safe'
 
 const store = createStorage({ storage: 'memory' })   // in-memory for Node.js
 store.set('key', 'value', { ttl: '5m' })

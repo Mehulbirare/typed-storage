@@ -1,5 +1,5 @@
 {
-  "name": "typestorage",
+  "name": "typedstorage-safe",
   "version": "1.0.0",
   "description": "TypeScript-first localStorage and sessionStorage with TTL expiry, SSR safety, cross-tab sync, and schema types. Zero dependencies.",
   "main": "./dist/index.js",
