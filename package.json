@@ -1,0 +1,72 @@
+{
+  "name": "typed-storage",
+  "version": "1.0.0",
+  "description": "TypeScript-first localStorage and sessionStorage with TTL expiry, SSR safety, cross-tab sync, and schema types. Zero dependencies.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": ["dist"],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "jest",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "localStorage",
+    "sessionStorage",
+    "typed-storage",
+    "typescript",
+    "ttl",
+    "expiry",
+    "cache",
+    "storage",
+    "browser-storage",
+    "ssr-safe",
+    "nextjs",
+    "react",
+    "vue",
+    "svelte",
+    "cross-tab-sync",
+    "schema",
+    "type-safe",
+    "persist",
+    "persists",
+    "localstorage-ttl",
+    "local-storage",
+    "session-storage",
+    "storage-wrapper",
+    "localstorage-typescript",
+    "zero-dependency"
+  ],
+  "author": "Mehulbirare",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mehulbirare/typed-storage"
+  },
+  "homepage": "https://github.com/Mehulbirare/typed-storage#readme",
+  "bugs": {
+    "url": "https://github.com/Mehulbirare/typed-storage/issues"
+  },
+  "peerDependencies": {},
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.4.2",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^22.0.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "ts-jest": "^29.2.0",
+    "tsup": "^8.1.0",
+    "typescript": "^5.4.5"
+  }
+}
